@@ -14,7 +14,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile"
                             dir "$PROJECT_DIR"
-                            label "eudat-b2handle"
+                            additionalBuildArgs "-t eudat-b2handle"
                             args "-u root:root"
                         }
                     }
@@ -30,7 +30,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-python2.6"
                             dir "$PROJECT_DIR"
-                            label "eudat-b2handle:python2.6"
+                            additionalBuildArgs "-t eudat-b2handle:python2.6"
                             args "-u root:root"
                         }
                     }
@@ -46,7 +46,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-py3.5"
                             dir "$PROJECT_DIR"
-                            label "eudat-b2handle:py3.5"
+                            additionalBuildArgs "-t eudat-b2handle:py3.5"
                             args "-u root:root"
                         }
                     }
@@ -62,7 +62,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-py3.6"
                             dir "$PROJECT_DIR"
-                            label "eudat-b2handle:py3.6"
+                            additionalBuildArgs "-t eudat-b2handle:py3.6"
                             args "-u root:root"
                         }
                     }
@@ -78,7 +78,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-py3.7"
                             dir "$PROJECT_DIR"
-                            label "eudat-b2handle:py3.7"
+                            additionalBuildArgs "-t eudat-b2handle:py3.7"
                             args "-u root:root"
                         }
                     }
