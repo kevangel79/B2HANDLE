@@ -17,7 +17,9 @@ pipeline {
                         }
                     }
                     steps {
-                        junit '**/tests/nosetests.xml'
+                        sh '''
+                            python setup.py install
+                        '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
                     }
                 }
@@ -29,7 +31,9 @@ pipeline {
                         }
                     }
                     steps {
-                        junit '**/tests/nosetests.xml'
+                        sh '''
+                            python setup.py install
+                        '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
                     }
                 }
@@ -41,7 +45,9 @@ pipeline {
                         }
                     }
                     steps {
-                        junit '**/tests/nosetests.xml'
+                        sh '''
+                            python setup.py install
+                        '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
                     }
                 }
@@ -53,7 +59,9 @@ pipeline {
                         }
                     }
                     steps {
-                        junit '**/tests/nosetests.xml'
+                        sh '''
+                            python setup.py install
+                        '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
                     }
                 }
@@ -65,7 +73,9 @@ pipeline {
                         }
                     }
                     steps {
-                        junit '**/tests/nosetests.xml'
+                        sh '''
+                            python setup.py install
+                        '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
                     }
                 }
