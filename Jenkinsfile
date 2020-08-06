@@ -14,9 +14,10 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile"
                             dir "$PROJECT_DIR"
+                            args "-u root:root"
                         }
                     }
-                    steps {
+                    stepcd $WORKSPACE/$PROJECT_DIRs {
                         sh '''
                             cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
@@ -29,6 +30,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-python2.6"
                             dir "$PROJECT_DIR"
+                            args "-u root:root"
                         }
                     }
                     steps {
@@ -44,6 +46,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-py3.5"
                             dir "$PROJECT_DIR"
+                            args "-u root:root"
                         }
                     }
                     steps {
@@ -59,6 +62,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-py3.6"
                             dir "$PROJECT_DIR"
+                            args "-u root:root"
                         }
                     }
                     steps {
@@ -74,6 +78,7 @@ pipeline {
                         dockerfile {
                             filename "Dockerfile-py3.7"
                             dir "$PROJECT_DIR"
+                            args "-u root:root"
                         }
                     }
                     steps {
