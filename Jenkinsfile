@@ -17,7 +17,7 @@ pipeline {
                             args "-u root:root"
                         }
                     }
-                    stepcd $WORKSPACE/$PROJECT_DIRs {
+                    steps {
                         sh '''
                             cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
