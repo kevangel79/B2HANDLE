@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'slave01'
+    }
     options {
         checkoutToSubdirectory('B2HANDLE')
     }
