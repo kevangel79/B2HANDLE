@@ -13,6 +13,7 @@ pipeline {
                     agent {
                         dockerfile {
                             filename "Dockerfile"
+                            dir "$PROJECT_DIR"
                         }
                     }
                     steps {
@@ -24,6 +25,7 @@ pipeline {
                     agent {
                         dockerfile {
                             filename "Dockerfile-python2.6"
+                            dir "$PROJECT_DIR"
                         }
                     }
                     steps {
@@ -35,6 +37,7 @@ pipeline {
                     agent {
                         dockerfile {
                             filename "Dockerfile-py3.5"
+                            dir "$PROJECT_DIR"
                         }
                     }
                     steps {
@@ -46,6 +49,7 @@ pipeline {
                     agent {
                         dockerfile {
                             filename "Dockerfile-py3.6"
+                            dir "$PROJECT_DIR"
                         }
                     }
                     steps {
@@ -57,6 +61,7 @@ pipeline {
                     agent {
                         dockerfile {
                             filename "Dockerfile-py3.7"
+                            dir "$PROJECT_DIR"
                         }
                     }
                     steps {
