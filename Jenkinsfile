@@ -18,6 +18,7 @@ pipeline {
                     }
                     steps {
                         sh '''
+                            cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
                         '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
@@ -32,6 +33,7 @@ pipeline {
                     }
                     steps {
                         sh '''
+                            cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
                         '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
@@ -46,6 +48,7 @@ pipeline {
                     }
                     steps {
                         sh '''
+                            cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
                         '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
@@ -60,6 +63,7 @@ pipeline {
                     }
                     steps {
                         sh '''
+                            cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
                         '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
@@ -74,6 +78,7 @@ pipeline {
                     }
                     steps {
                         sh '''
+                            cd $WORKSPACE/$PROJECT_DIR
                             python setup.py install
                         '''
                         cobertura coberturaReportFile: '**/tests/coverage-jenkins.xml'
